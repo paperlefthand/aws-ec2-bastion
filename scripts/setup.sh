@@ -9,5 +9,5 @@ cat <<EOT > /home/ec2-user/main.py
 $(cat main.py)
 EOT
 
-uvicorn main:app --reload --host=0.0.0.0
+# uvicorn main:app --reload --host=0.0.0.0
 # python3.11 /home/ec2-user/main.py

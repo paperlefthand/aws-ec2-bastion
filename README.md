@@ -1,4 +1,4 @@
-# EC2+FastAPIのサンプル
+# AWS EC2のPublic/Privateサブネット構成のサンプル
 
 ## 構成
 
@@ -6,14 +6,12 @@
 2. それぞれのAZにPublic/Privateのサブネット
 3. 2.のパブリックサブネットにはそれぞれNAT Gateway
 4. ap-northeast-1aのpublic subnetには踏み台サーバ(EC2 t2.micro)
-5. ap-northeast-1a,1cのprivate subnetにはそれぞれアプリサーバ(EC2 t2.micro Pythonのfastapi)
-6. 4.の踏み台サーバには, 指定したキーペアを持つ外部からSSH接続可能.
+5. ap-northeast-1a,1cのprivate subnetにはそれぞれアプリサーバ(EC2 t2.micro)
+6. 4.の踏み台サーバには, 公開鍵`ec2_key_pair/deployer_key.pub`を配置してSSH接続.
 
 ## TODO
 
 - リソース名の付与
 - サーバへのSSH確認
-- FastAPIの動作確認
+- FastAPI不要
 - diagram
-- ALB
-- CI/CD
